@@ -6,7 +6,6 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,21 +20,21 @@ public class DemoController {
 	private final Logger logger = LoggerFactory.getLogger(DemoController.class);
 	
 //	@RequestMapping("/demo")
-	@GetMapping("/demo")
+	@GetMapping("/hello")
 	public String welcome() throws Exception {
-		logger.info("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+		logger.info(">>>>>>>>>>>>>>>>>>>>> welcome called <<<<<<<<<<<<<<<<<<<<<");
 //		throw new Exception();
-		return "welcome";
+		return "Welcome this class \n";
 	}
 	
 	
 	
 	
-	@GetMapping(value = "/hello")
-    @ApiOperation(value = "hello, world api", notes = "hellow world swagger check")
-    public String hellowWorld(){
-        return "hello, world";
-    }
+//	@GetMapping(value = "/hello")
+//    @ApiOperation(value = "hello, world api", notes = "hellow world swagger check")
+//    public String hellowWorld(){
+//        return "hello, world";
+//    }
 
 
     @ApiOperation(value = "test", notes = "테스트입니다")
